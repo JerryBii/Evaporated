@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+#Steam API Key
+1B7A98550E55FAD4A97C87E114C9ECA1
+
 # dependencies
 /node_modules
 /.pnp
@@ -17,6 +20,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.eslintcache
 
 npm-debug.log*
 yarn-debug.log*
