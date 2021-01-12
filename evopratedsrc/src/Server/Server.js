@@ -1,19 +1,25 @@
 const express = require('express');
+const cors = require('cors');
+const bodyparser = require("body-parser")
 const app = express();
 const port = process.env.PORT || 3001;
-const cors = require('cors');
-const bodyParser = require('body-parser')
-const fetch = require('axios')
-app.use(bodyParser());
-app.use(cors());
 
-app.get("/api/evaporated", async (req, res) => {
-    console.log("hi")
-    fetch.get('http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=81AEBD367EF5879D939444C6B3386C25&steamids=76561197960435530')
-        .then(response => {
-            console.log(response.data.response.players[0].steamid);
-            res.send({responseText: response.data.response.players, status: 200});  
-        })      
+const SteamAPI = require('steamapi');
+const steam = new SteamAPI('81AEBD367EF5879D939444C6B3386C25');
+
+app.use(cors());
+app.use(bodyparser());
+
+
+app.post("/api/evaporated", async (req, res) => {
+
+    steam.resolve('https://steamcommunity.com/id/' + req.body.steamID).then(id => {
+        steam.get('/IPlayerService/GetOwnedGames/v1?steamid=' + id).then(summary => {
+            console.log(summary);
+            res.send({responseText: summary, status: 200});
+    
+        });
+    });
 })
 
 app.listen(port, () => console.log(`Listening on port ${port}!`))
