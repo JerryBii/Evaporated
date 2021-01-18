@@ -1,22 +1,22 @@
 import React, { useState } from "react"
 
-
-function Search() {
+function Search({render}) {
     const [steamID, setSteamID] = useState('')
 
     function handleSubmit(event) {
+
+
         fetch("http://localhost:3001/api/evaporated", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded',
             },
             body: JSON.stringify({ steamID: steamID })
         })
-        .then(id => {
-            console.log(id.json())
-        })
-
+        .then(response => response.json())
+        .then(response => console.log(response.responseText)
+        )
+        
 
         event.preventDefault()
     }

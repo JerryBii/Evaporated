@@ -1,25 +1,27 @@
-const express = require('express');
-const cors = require('cors');
+const express = require('express')
+const cors = require('cors')
 const bodyparser = require("body-parser")
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3001
 
-const SteamAPI = require('steamapi');
-const steam = new SteamAPI('81AEBD367EF5879D939444C6B3386C25');
+const SteamAPI = require('steamapi')
+const steam = new SteamAPI('81AEBD367EF5879D939444C6B3386C25')
 
-app.use(cors());
-app.use(bodyparser());
+app.use(cors())
+app.use(bodyparser())
 
 
 app.post("/api/evaporated", async (req, res) => {
 
     steam.resolve('https://steamcommunity.com/id/' + req.body.steamID).then(id => {
-        steam.get('/IPlayerService/GetOwnedGames/v1?steamid=' + id).then(summary => {
+        steam.getUserOwnedGames(id).then(summary => {
             console.log(summary);
-            res.send({responseText: summary, status: 200});
-    
-        });
-    });
+            res.send({ responseText: summary, status: 200 })
+        })
+    }).catch(error => {
+        console.log("do something later with error")
+        res.send({ responseText: "", status: 200 })
+    })
 })
 
 app.listen(port, () => console.log(`Listening on port ${port}!`))
