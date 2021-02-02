@@ -1,30 +1,37 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import Search from "./Components/Search"
 import Result from "./Components/Result"
 import NotFound from "./Components/NotFound"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 function App() {
-  const [renderScreen, setRenderScreen] = useState(0)
-  
-  function pageRender(curScreen) {
-    setRenderScreen(curScreen)
+  const [playTime, setPlayTime] = useState("")
+
+  function passPlayTime(formData) {
+    setPlayTime(formData)
   }
 
-  let page = null
+  React.useEffect(() => {
+    const data = localStorage.getItem("playtime")
+    if (data) {
+      setPlayTime(JSON.parse(data))
+    }
+  },[])
 
-  if(renderScreen === 0 ){
-    page = <Search render = {pageRender}/>
-  }else if(renderScreen === 1){
-    page = <Result />
-  }else{
-    page = <NotFound />
-  }
-
+  React.useEffect(() => {
+    localStorage.setItem("playtime", JSON.stringify(playTime))
+  })
 
   return (
-    <div>
-        {page}
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/" exact render={(props) => <Search {...props} setPlayTime={passPlayTime} />} />
+          <Route path="/Result" render={(props) => <Result {...props} totalTime={playTime} />} />
+          <Route path="/NotFound" component={NotFound} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

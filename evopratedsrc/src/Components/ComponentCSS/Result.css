@@ -1,0 +1,51 @@
+.total{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    font-family: Arial, sans-serif;
+    font-weight: bold; 
+    font-style:oblique;
+    display: flex;
+    color: #ffffff; 
+    animation: fadein 6s;
+    -moz-animation: fadein 6s; /* Firefox */
+    -webkit-animation: fadein 6s; /* Safari and Chrome */
+    -o-animation: fadein 6s; /* Opera */
+}
+.hours{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    font-family: Arial, sans-serif;
+    font-weight: bold; 
+    font-style:oblique;
+    display: flex;
+    color: #ffffff; 
+    animation: fadein 8s;
+    -moz-animation: fadein 8s; /* Firefox */
+    -webkit-animation: fadein 8s; /* Safari and Chrome */
+    -o-animation: fadein 8s; /* Opera */
+}
+.days{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    font-family: Arial, sans-serif;
+    font-weight: bold; 
+    font-style:oblique;
+    display: flex;
+    color: #ffffff; 
+    animation: fadein 10s;
+    -moz-animation: fadein 10s; /* Firefox */
+    -webkit-animation: fadein 10s; /* Safari and Chrome */
+    -o-animation: fadein 10s; /* Opera */
+}
+
+span{
+    color: gold;
+    background: none;
+    
+}

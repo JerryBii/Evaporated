@@ -1,0 +1,108 @@
+body {
+    background-image: linear-gradient(to right , #242323 , #2a2a2a);
+}
+
+.searchBar {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    background: #fbfbfb;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    animation: fadein 5s;
+    -moz-animation: fadein 5s; /* Firefox */
+    -webkit-animation: fadein 5s; /* Safari and Chrome */
+    -o-animation: fadein 5s; /* Opera */
+}
+
+.evaporate{
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    font-family: Arial, sans-serif;
+    font-weight: bold; 
+    font-style:oblique;
+    color: #ffffff; 
+    animation: fadein 6s;
+    -moz-animation: fadein 6s; /* Firefox */
+    -webkit-animation: fadein 6s; /* Safari and Chrome */
+    -o-animation: fadein 6s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.searchBar:hover > input {
+    width: 240px;
+}
+
+.searchBar:hover > button{
+    background: rgb(32, 32, 32);
+    color : #ffffff;
+  }
+
+input {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: rgb(42, 42, 42);
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+
+button {
+    font-weight:bold;
+    color: #242323;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #242323;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 620px) {
+    .searchBar:hover > input {
+        width: 140px;
+        padding: 0 6px;
+    }
+    }
