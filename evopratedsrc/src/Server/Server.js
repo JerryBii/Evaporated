@@ -17,12 +17,10 @@ app.post("/api/evaporated", async (req, res) => {
         steam.getUserOwnedGames(id).then(summary => {
             console.log(summary);
             res.send({ responseText: summary, status: 200 })
-        }).catch(error =>{
-            console.log("oops")
+        }).catch(() =>{
             res.send({ responseText: "", status: 200 })
         })
-    }).catch(error => {
-        console.log("do something later with error")
+    }).catch(() =>{
         res.send({ responseText: "", status: 200 })
     })
 })
