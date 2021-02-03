@@ -1,5 +1,7 @@
 import React from "react"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+import "./ComponentCSS/NotFound.css"
+
 function NotFound() {
     return (
         <div>
@@ -9,7 +11,7 @@ function NotFound() {
             3. The user has an empty or private library<br />
             </h2>
             <Link to="/">
-                <button className = "return">Return to Search</button>
+                    <button className="back">Try Again :(</button>
             </Link>
         </div>
     )

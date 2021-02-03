@@ -49,7 +49,7 @@ function Search(props) {
                         }
                         }
                     />
-                    <button>🢂</button>
+                    <button className = "Submit">🢂</button>
                 </form>
         </div >
     );

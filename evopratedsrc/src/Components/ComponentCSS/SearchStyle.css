@@ -86,7 +86,7 @@ input {
     width: 0px;
 }
 
-button {
+.Submit {
     font-weight:bold;
     color: #242323;
     float: right;
