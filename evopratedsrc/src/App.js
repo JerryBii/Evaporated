@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Search from "./Components/Search";
 import Result from "./Components/Result";
 import NotFound from "./Components/NotFound";
-import HowTo from "./Components/HowTo";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -36,7 +35,6 @@ function App() {
             path="/Result"
             render={(props) => <Result {...props} totalTime={playTime} />}
           />
-          <Route path="/HowTo" compononent={HowTo} />
           <Route path="/NotFound" component={NotFound} />
         </Switch>
       </div>

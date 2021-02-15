@@ -12,7 +12,7 @@ This is a React Router based app. Thus it is important to run the following comm
 
 We also require a steamAPI wrapper, it can be installed like this:
 
-### npm nstall steamapi
+### npm install steamapi
 
 We also use an express server as a proxy to access the API:
 
@@ -23,3 +23,5 @@ We also use an express server as a proxy to access the API:
 ### npm install body-parser
 
 That should cover everything! Have fun! Let me know if there are any improvements you would suggest :)
+
+Try out the site here: http://52.188.117.46/

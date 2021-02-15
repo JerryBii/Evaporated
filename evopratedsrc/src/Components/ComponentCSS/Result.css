@@ -1,73 +1,73 @@
-.total{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform:  translate(-50%,50%);
-    font-family: Arial, sans-serif;
-    font-weight: bold; 
-    font-style:oblique;
-    display: flex;
-    color: #ffffff; 
-    animation: fadein 6s;
-    -moz-animation: fadein 6s; /* Firefox */
-    -webkit-animation: fadein 6s; /* Safari and Chrome */
-    -o-animation: fadein 6s; /* Opera */
+.total {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-style: oblique;
+  display: flex;
+  color: #ffffff;
+  animation: fadein 6s;
+  -moz-animation: fadein 6s; /* Firefox */
+  -webkit-animation: fadein 6s; /* Safari and Chrome */
+  -o-animation: fadein 6s; /* Opera */
 }
-.hours{
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform:  translate(-50%,50%);
-    font-family: Arial, sans-serif;
-    font-weight: bold; 
-    font-style:oblique;
-    display: flex;
-    color: #ffffff; 
-    animation: fadein 8s;
-    -moz-animation: fadein 8s; /* Firefox */
-    -webkit-animation: fadein 8s; /* Safari and Chrome */
-    -o-animation: fadein 8s; /* Opera */
+.hours {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-style: oblique;
+  display: flex;
+  color: #ffffff;
+  animation: fadein 8s;
+  -moz-animation: fadein 8s; /* Firefox */
+  -webkit-animation: fadein 8s; /* Safari and Chrome */
+  -o-animation: fadein 8s; /* Opera */
 }
-.days{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:  translate(-50%,50%);
-    font-family: Arial, sans-serif;
-    font-weight: bold; 
-    font-style:oblique;
-    display: flex;
-    color: #ffffff; 
-    animation: fadein 10s;
-    -moz-animation: fadein 10s; /* Firefox */
-    -webkit-animation: fadein 10s; /* Safari and Chrome */
-    -o-animation: fadein 10s; /* Opera */
+.days {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-style: oblique;
+  display: flex;
+  color: #ffffff;
+  animation: fadein 10s;
+  -moz-animation: fadein 10s; /* Firefox */
+  -webkit-animation: fadein 10s; /* Safari and Chrome */
+  -o-animation: fadein 10s; /* Opera */
 }
 
-.return{
-    margin: 0;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background-color: #333333;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s;
-    border: 2px solid #ffffff; 
-    animation: fadein 10s;
-    -moz-animation: fadein 10s; /* Firefox */
-    -webkit-animation: fadein 10s; /* Safari and Chrome */
-    -o-animation: fadein 10s; /* Opera */
-  }
-  
-  .return:hover {
-    background-color: #242323; /* Green */
-    color: white;
-  }
+.return {
+  margin: 0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #333333;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  border: 2px solid #ffffff;
+  animation: fadein 10s;
+  -moz-animation: fadein 10s; /* Firefox */
+  -webkit-animation: fadein 10s; /* Safari and Chrome */
+  -o-animation: fadein 10s; /* Opera */
+}
+
+.return:hover {
+  background-color: #242323; /* Green */
+  color: white;
+}

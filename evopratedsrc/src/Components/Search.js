@@ -6,7 +6,7 @@ function Search(props) {
   const [steamID, setSteamID] = useState("");
 
   function handleSubmit(event) {
-    fetch("http://localhost:3001/api/evaporated", {
+    fetch("http://52.188.117.46/api/evaporated", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
